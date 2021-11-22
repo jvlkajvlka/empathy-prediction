@@ -1,0 +1,17 @@
+LOAD CSV FROM 'file:///responses.csv' AS rec
+MERGE (p:Person{node_name:'Person', person_id: rec[0]})
+MERGE (m:Spending_habit{node_name:'Spending habit'})
+MERGE (m1:Shopping_centre{node_name:'Shopping centre'})
+MERGE (m2:Branded_clothing{node_name:'Branded clothing'})
+MERGE (m3:Entertainment{node_name:'Entertainment'})
+MERGE (m4:Appearence{node_name:'Apperence'})
+MERGE (m5:Gadget{node_name:'Gadget'})
+MERGE (m6:Healthy_eating{node_name:'Healthy eating'})
+
+CREATE  (p)-[r:HAS{Level: rec[134]}]->(m)
+CREATE  (p)-[r1:LIKES {Level: rec[135]}]->(m1)
+CREATE  (p)-[r2:SPENDS_ON {Level: rec[136]}]->(m2)
+CREATE  (p)-[r3:SPENDS_ON {Level: rec[137]}]->(m3)
+CREATE  (p)-[r4:SPENDS_ON {Level: rec[138]}]->(m4)
+CREATE  (p)-[r5:SPENDS_ON {Level: rec[139]}]->(m5)
+CREATE  (p)-[r6:SPENDS_ON {Level: rec[140]}]->(m6)
