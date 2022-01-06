@@ -1,5 +1,5 @@
 LOAD CSV FROM 'file:///responses.csv' AS rec
-MERGE (p:Person{node_name:'Person', id: rec[0]})
+MERGE (p:Person{node_name:'Person', person_id: rec[0]})
 MERGE (m:Personality_traits{node_name:'Personality traits'})
 MERGE (m1:Daily_events{node_name:'Daily events'})
 MERGE (m2:Prioritising_workload{node_name:'Prioritising workload'})

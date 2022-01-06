@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_0auwiqy" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.11.1">
+  <decision id="Decision_1vybgvj" name="Cognitivie activity">
+    <informationRequirement id="InformationRequirement_0a1bvqm">
+      <requiredInput href="#InputData_1f8ww21" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_09yksze">
+      <requiredInput href="#InputData_1ycs905" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_19qqjnp">
+      <requiredInput href="#InputData_1ojgjab" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_1xe74bo">
+      <requiredInput href="#InputData_0vib51h" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_1tee2qo">
+      <requiredInput href="#InputData_1n73fty" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1eg86ve">
+      <input id="Input_1" label="Biological readiness">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>Biological_readiness</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0wot394" label="Learning history" biodi:width="192">
+        <inputExpression id="LiteralExpression_1gnh3pr" typeRef="boolean">
+          <text>Learning_history</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1b10drr" label="Personality" biodi:width="192">
+        <inputExpression id="LiteralExpression_1uoh0cs" typeRef="string">
+          <text>Personality</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_17mloj6" label="Strength of situation" biodi:width="192">
+        <inputExpression id="LiteralExpression_05ipy6r" typeRef="string">
+          <text>Strength_of_situation</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0yl9thp" label="Observer/target similarity" biodi:width="192">
+        <inputExpression id="LiteralExpression_1w793nb" typeRef="boolean">
+          <text>Observer_target_similarity</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Cognitive activity" name="Cognitiveactivity" typeRef="string" />
+      <rule id="DecisionRule_0o775qy">
+        <inputEntry id="UnaryTests_1r2d1tj">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bz6i79">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ftvkvh">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03k6iwe">
+          <text>"small"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05wwaa4">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_145y01l">
+          <text>"small"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sudefb">
+        <inputEntry id="UnaryTests_168ylpl">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hkskip">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ep4b7h">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uztfks">
+          <text>"small"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00ckbbg">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cgin1o">
+          <text>"medium"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ipygtz">
+        <inputEntry id="UnaryTests_1rw8b03">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x9kmgr">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xsuxf6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02e0rri">
+          <text>"medium"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1b2rk2m">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jzhqpm">
+          <text>"medium"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08941tw">
+        <inputEntry id="UnaryTests_0iazk1q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q6zuxe">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s0zcsg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03lj2k7">
+          <text>"medium"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10xjinu">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10i8d2c">
+          <text>"big"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_110fclh">
+        <inputEntry id="UnaryTests_1k9lj8l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ewbnsq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eapkzt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pp38mw">
+          <text>"big"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j6tdwl">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15z50to">
+          <text>"big"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1f8ww21" name="Personality" />
+  <inputData id="InputData_1ycs905" name="Learning history" />
+  <inputData id="InputData_1ojgjab" name="Strenght of situation" />
+  <inputData id="InputData_0vib51h" name="Observer/target similarity" />
+  <inputData id="InputData_1n73fty" name="Biological readiness" />
+  <decision id="Decision_1xwv6kk" name="Processes">
+    <informationRequirement id="InformationRequirement_0ea7gdi">
+      <requiredDecision href="#Decision_1vybgvj" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0i320u7">
+      <input id="InputClause_1cet6zi" label="Cognitivie activity">
+        <inputExpression id="LiteralExpression_0cdekr4" typeRef="string">
+          <text>Cognitivie_activity</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_040be7v" label="Processes" name="Processes" typeRef="string" />
+      <rule id="DecisionRule_0r68xwe">
+        <inputEntry id="UnaryTests_1ic2hul">
+          <text>"small"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lp9edd">
+          <text>"noncognitive"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ymcazu">
+        <inputEntry id="UnaryTests_1ooiscl">
+          <text>"medium"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0eedszz">
+          <text>"simple cognitive"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01rxgng">
+        <inputEntry id="UnaryTests_0jak08r">
+          <text>"big"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1d48ta9">
+          <text>"advance cognitive"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_106zevs" name="Intrapersonal outcomes">
+    <informationRequirement id="InformationRequirement_0an68sx">
+      <requiredDecision href="#Decision_1xwv6kk" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0b1a5qm">
+      <input id="InputClause_0i20qk8" label="Process">
+        <inputExpression id="LiteralExpression_1nsffs5" typeRef="string">
+          <text>Process</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0ikjgxm" label="Intrapersonal outcomes" name="Intrapersonal outcomes" typeRef="string" />
+      <rule id="DecisionRule_007s7r6">
+        <inputEntry id="UnaryTests_0zc66vu">
+          <text>"noncognitive"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mxnox9">
+          <text>"cognitive outcomes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1uk9oaf">
+        <inputEntry id="UnaryTests_0aaqls5">
+          <text>"simple cognitive"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05cn84n">
+          <text>"noncognitive outcomes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1e1xdu6">
+        <inputEntry id="UnaryTests_0h1l5fg">
+          <text>"advance cognitive"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_130fx06">
+          <text>"cognitive and noncognitive outcomes"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_0161z8y" name="Interpersonal outcomes">
+    <informationRequirement id="InformationRequirement_0vgxzuy">
+      <requiredDecision href="#Decision_106zevs" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0e26xpr">
+      <input id="InputClause_0yhhcrs" label="Intrapersonal outcomes">
+        <inputExpression id="LiteralExpression_1xzvhie" typeRef="string">
+          <text>Intrapersonal_outcomes</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_13cy55z" label="Interpersonal outcomes" name="Interpersonal outcomes" typeRef="boolean" />
+      <rule id="DecisionRule_1pojrys">
+        <inputEntry id="UnaryTests_01gw61a">
+          <text>"cognitive outcomes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1a52mt1">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07c1drn">
+        <inputEntry id="UnaryTests_0xo6lx0">
+          <text>"noncognitive outcomes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1f29f8h">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rbogqx">
+        <inputEntry id="UnaryTests_0124f7q">
+          <text>"cognitive and noncognitive outcomes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0t0iobk">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1vybgvj">
+        <dc:Bounds height="80" width="180" x="610" y="490" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1bdfrqr" dmnElementRef="InputData_1f8ww21">
+        <dc:Bounds height="45" width="125" x="637" y="647" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1objp7d" dmnElementRef="InformationRequirement_0a1bvqm">
+        <di:waypoint x="700" y="647" />
+        <di:waypoint x="700" y="590" />
+        <di:waypoint x="700" y="570" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1pcknqy" dmnElementRef="InputData_1ycs905">
+        <dc:Bounds height="45" width="125" x="877" y="647" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1lcvf7c" dmnElementRef="InformationRequirement_09yksze">
+        <di:waypoint x="940" y="647" />
+        <di:waypoint x="730" y="590" />
+        <di:waypoint x="730" y="570" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_101ov8u" dmnElementRef="InputData_1ojgjab">
+        <dc:Bounds height="45" width="125" x="397" y="647" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_094um47" dmnElementRef="InformationRequirement_19qqjnp">
+        <di:waypoint x="460" y="647" />
+        <di:waypoint x="670" y="590" />
+        <di:waypoint x="670" y="570" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1uaa034" dmnElementRef="InputData_0vib51h">
+        <dc:Bounds height="45" width="125" x="1117" y="647" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_10r94n8" dmnElementRef="InformationRequirement_1xe74bo">
+        <di:waypoint x="1180" y="647" />
+        <di:waypoint x="760" y="590" />
+        <di:waypoint x="760" y="570" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_07nlcnn" dmnElementRef="InputData_1n73fty">
+        <dc:Bounds height="45" width="125" x="157" y="647" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0ax7vnw" dmnElementRef="InformationRequirement_1tee2qo">
+        <di:waypoint x="220" y="647" />
+        <di:waypoint x="640" y="590" />
+        <di:waypoint x="640" y="570" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0g1al5n" dmnElementRef="Decision_1xwv6kk">
+        <dc:Bounds height="80" width="180" x="610" y="360" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0o6e2q0" dmnElementRef="InformationRequirement_0ea7gdi">
+        <di:waypoint x="700" y="490" />
+        <di:waypoint x="700" y="460" />
+        <di:waypoint x="700" y="440" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_1shf1h5" dmnElementRef="InformationRequirement_0an68sx">
+        <di:waypoint x="700" y="360" />
+        <di:waypoint x="700" y="320" />
+        <di:waypoint x="700" y="300" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_138ubqk" dmnElementRef="InformationRequirement_0vgxzuy">
+        <di:waypoint x="700" y="220" />
+        <di:waypoint x="700" y="180" />
+        <di:waypoint x="700" y="160" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0s5g6up" dmnElementRef="Decision_106zevs">
+        <dc:Bounds height="80" width="180" x="610" y="220" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0yz1eho" dmnElementRef="Decision_0161z8y">
+        <dc:Bounds height="80" width="180" x="610" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
